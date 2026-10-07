@@ -27,8 +27,20 @@ def flag():
     karta = karta.replace('б', f'{CSI}48;5;15m{probel}{RESET}')
     karta = karta.replace('к', f'{CSI}48;5;196m{probel}{RESET}')
     print(karta)
-flag()
 
+def uzor(repeat):
+    uzor =f'{"DDDSDDDDDSDD"*repeat}D\n\
+{"DDSDSDDDSDSD"*repeat}D\n\
+{"DSDDDSDSDDDS"*repeat}D\n\
+{"SDDDDDSDDDDD"*repeat}S\n\
+{"DSDDDSDSDDDS"*repeat}D\n\
+{"DDSDSDDDSDSD"*repeat}D\n\
+{"DDDSDDDDDSDD"*repeat}D'
+    uzor = uzor.replace('D',f'{CSI}48;5;118m{probel}{RESET}')
+    uzor = uzor.replace('S',f'{CSI}48;5;160m{probel}{RESET}')
+    print(uzor)
+
+uzor(4)
 # print(f'{RESET}ntncn')
 # print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
 # print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
