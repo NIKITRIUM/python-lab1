@@ -1,7 +1,10 @@
 from math import *
-
+f = open('sequence.txt')
+A = [float(i) for i in f]
+f.close()
 CSI = f'\x1B['
 
+print(A[:10])
 RESET = f'{CSI}0m'
 ERASE = f'{CSI}2K'
 START = f'{CSI}0G'
@@ -40,7 +43,16 @@ def uzor(repeat):
     uzor = uzor.replace('S',f'{CSI}48;5;160m{probel}{RESET}')
     print(uzor)
 
-uzor(4)
+def diagramma(spis):
+    otr = [i for i in spis if i<=0]
+    vsego = len(otr)
+    bol5 = [i for i in otr if i>-5] 
+    men5 = [i for i in otr if i<-5]
+    dolya_bol = int((len(bol5)/vsego)*100)
+    print(f'Больше -5:{CSI}48;5;118m{" "*dolya_bol}{CSI}11G{CSI}38;5;196m{str(dolya_bol)+'%'}{RESET}')
+    print(f'Меньше -5:{CSI}48;5;118m{" "*(100-dolya_bol)}{CSI}11G{CSI}38;5;196m{str(100-dolya_bol)+'%'}{RESET}')
+        
+diagramma(A)
 # print(f'{RESET}ntncn')
 # print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
 # print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
