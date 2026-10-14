@@ -1,10 +1,11 @@
 from math import *
+import os
+from time import *
 f = open('sequence.txt')
 A = [float(i) for i in f]
 f.close()
 CSI = f'\x1B['
 
-print(A[:10])
 RESET = f'{CSI}0m'
 ERASE = f'{CSI}2K'
 START = f'{CSI}0G'
@@ -51,8 +52,54 @@ def diagramma(spis):
     dolya_bol = int((len(bol5)/vsego)*100)
     print(f'Больше -5:{CSI}48;5;118m{" "*dolya_bol}{CSI}11G{CSI}38;5;196m{str(dolya_bol)+'%'}{RESET}')
     print(f'Меньше -5:{CSI}48;5;118m{" "*(100-dolya_bol)}{CSI}11G{CSI}38;5;196m{str(100-dolya_bol)+'%'}{RESET}')
-        
-diagramma(A)
-# print(f'{RESET}ntncn')
-# print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
-# print(f'{CSI}48;5;118m{CSI}38;5;18m   {RESET}')
+
+def animation():
+    os.system("cls")
+    print(' ')
+    print(f'{CSI}4G{CSI}48;5;217m{CSI}38;5;13m(xx){RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m<-    ->{RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m|{RESET} {CSI}48;5;217m    {RESET} {CSI}48;5;217m|{RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m^{RESET} {CSI}48;5;217m <> {RESET} {CSI}48;5;217m^{RESET}')
+    print(f'{CSI}3G{CSI}48;5;217m{CSI}38;5;13m/ {RESET}  {CSI}48;5;217m \\{RESET}')
+    print(f'{CSI}3G{CSI}48;5;217m{CSI}38;5;13m| {RESET}  {CSI}48;5;217m |{RESET}')
+    print(f'{CSI}3G{CSI}48;5;217m{CSI}38;5;13mI {RESET}  {CSI}48;5;217m I{RESET}')
+    sleep(1.5)
+    os.system("cls")
+    print(' ')
+    print(f'{CSI}4G{CSI}48;5;217m{CSI}38;5;13m(00){RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m<-    ->{RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m|{RESET} {CSI}48;5;217m    {RESET} {CSI}48;5;217m|{RESET}')
+    print(f'{CSI}2G{CSI}48;5;77m{CSI}38;5;82mм{RESET} {CSI}48;5;217m <> {RESET} {CSI}38;5;82m{CSI}48;5;77mм{RESET}')
+    print(f'{CSI}3G{CSI}48;5;217m{CSI}38;5;13m/ {RESET}  {CSI}48;5;217m \\{RESET}')
+    print(f'{CSI}3G{CSI}48;5;217m{CSI}38;5;13m| {RESET}  {CSI}48;5;217m |{RESET}')
+    print(f'{CSI}3G{CSI}48;5;77m{CSI}38;5;82mЯ {RESET}  {CSI}48;5;77m R{RESET}')
+    sleep(1.5)
+    os.system("cls")
+    print(' ')
+    print(f'{CSI}4G{CSI}48;5;217m{CSI}38;5;13m(00){RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m<-    ->{RESET}')
+    print(f'{CSI}2G{CSI}48;5;217m{CSI}38;5;13m|{RESET} {CSI}48;5;217m    {RESET} {CSI}48;5;217m|{RESET}')
+    print(f'{CSI}2G{CSI}48;5;77m{CSI}38;5;82mм{RESET} {CSI}48;5;217m <> {RESET} {CSI}38;5;82m{CSI}48;5;77mм{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m/ {RESET}  {CSI}48;5;8m{CSI}38;5;7m \\{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m| {RESET}  {CSI}48;5;8m{CSI}38;5;7m |{RESET}')
+    print(f'{CSI}3G{CSI}48;5;77m{CSI}38;5;82mЯ {RESET}  {CSI}48;5;77m R{RESET}')
+    sleep(1.5)    
+    os.system("cls")
+    print(' ')
+    print(f'{CSI}4G{CSI}48;5;217m{CSI}38;5;13m(++){RESET}')
+    print(f'{CSI}2G{CSI}48;5;196m{CSI}38;5;210m<-    ->{RESET}')
+    print(f'{CSI}2G{CSI}48;5;196m{CSI}38;5;210m|{RESET} {CSI}48;5;196m{CSI}38;5;210m LV {RESET} {CSI}38;5;210m{CSI}48;5;196m|{RESET}')
+    print(f'{CSI}2G{CSI}48;5;77m{CSI}38;5;82mм{RESET} {CSI}48;5;196m    {RESET} {CSI}38;5;82m{CSI}48;5;77mм{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m/ {RESET}  {CSI}48;5;8m{CSI}38;5;7m \\{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m| {RESET}  {CSI}48;5;8m{CSI}38;5;7m |{RESET}')
+    print(f'{CSI}3G{CSI}48;5;77m{CSI}38;5;82mЯ {RESET}  {CSI}48;5;77m R{RESET}')
+    sleep(1.5)  
+    os.system("cls")
+    print(f'{CSI}5G{CSI}48;5;70m{CSI}38;5;82m<>{RESET}')
+    print(f'{CSI}4G{CSI}48;5;70m{CSI}38;5;82m{{**}}{RESET}')
+    print(f'{CSI}2G{CSI}48;5;196m{CSI}38;5;210m<-    ->{RESET}')
+    print(f'{CSI}2G{CSI}48;5;196m{CSI}38;5;210m|{RESET} {CSI}48;5;196m{CSI}38;5;210m LV {RESET} {CSI}38;5;210m{CSI}48;5;196m|{RESET}')
+    print(f'{CSI}2G{CSI}48;5;77m{CSI}38;5;82mм{RESET} {CSI}48;5;196m    {RESET} {CSI}38;5;82m{CSI}48;5;77mм{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m/ {RESET}  {CSI}48;5;8m{CSI}38;5;7m \\{RESET}')
+    print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m| {RESET}  {CSI}48;5;8m{CSI}38;5;7m |{RESET}')      
+animation()
