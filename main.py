@@ -54,6 +54,7 @@ def diagramma(spis):
     print(f'Меньше -5:{CSI}48;5;118m{" "*(100-dolya_bol)}{CSI}11G{CSI}38;5;196m{str(100-dolya_bol)+'%'}{RESET}')
 
 def animation():
+
     os.system("cls")
     print(' ')
     print(f'{CSI}4G{CSI}48;5;217m{CSI}38;5;13m(xx){RESET}')
@@ -102,24 +103,24 @@ def animation():
     print(f'{CSI}2G{CSI}48;5;77m{CSI}38;5;82mм{RESET} {CSI}48;5;196m    {RESET} {CSI}38;5;82m{CSI}48;5;77mм{RESET}')
     print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m/ {RESET}  {CSI}48;5;8m{CSI}38;5;7m \\{RESET}')
     print(f'{CSI}3G{CSI}48;5;8m{CSI}38;5;7m| {RESET}  {CSI}48;5;8m{CSI}38;5;7m |{RESET}')      
+    print(f'{CSI}3G{CSI}48;5;77m{CSI}38;5;82mЯ {RESET}  {CSI}48;5;77m R{RESET}')
 
 def func():
     os.system("cls")
-    for i in range(27,0,-1):
+    print('y')
+    for i in range(20,0,-1):
         print(f' {i}'[-2:])
         print('  ')
-    print(' 0 1 2 3 4 5 6 7 8 9', end='')
+    print(' 0 1 2 3 4 5 6 7 8 9 x', end='')
     print(f'{CSI}2G', end='')
     y = 0
-    for x in range(0,18):
+    for x in range(0,15):
         while y<3*x:
-            print(f'{CSI}1A{CSI}48;5;15m {CSI}1D{CSI}1A {CSI}1D', end='')
-            y+=2
+            print(f'{CSI}1A{CSI}48;5;15m {CSI}1D', end='')
+            y+=1
         print(f'{CSI}1C', end='')
     
     print(f'{RESET}')
     print(f'{CSI}900B')
-
-
 
 func()
